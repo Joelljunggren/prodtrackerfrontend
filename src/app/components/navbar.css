@@ -4,7 +4,7 @@
     width: 100%;
     text-align: center;
     background-color: whitesmoke;
-    opacity: .4;
+    opacity: .6;
   }
   
   .navlink {
@@ -13,5 +13,7 @@
     opacity: 1;
     text-decoration: none;
     color: black;
+    font-size: 20px;
+    font-weight: bold;
   }
   

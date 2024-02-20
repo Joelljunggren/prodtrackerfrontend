@@ -10,32 +10,15 @@ body {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
-
-/* .navBar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  background-color: whitesmoke;
-  opacity: .4;
-}
-
-.navlink {
-  display: inline-block;
-  padding: 20px 20px;
-  opacity: 1;
-  text-decoration: none;
-  color: black;
-} */
 
 .MainMenu {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   padding: 10px;
   color: whitesmoke;
-  text-decoration: none;
 }
 
 .MenuLink {

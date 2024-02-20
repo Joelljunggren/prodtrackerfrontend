@@ -1,10 +1,9 @@
-import Navbar from "./components/navbar"
+import Navbar from "./components/Navbar"
 import InfoDiv from "./components/infodiv"
-import MainMenu from "./components/mainmenu"
+import MainMenu from "./components/MainMenu"
 
 export default function Home() {
   return <>
-  <Navbar/>
     <section className="split">
       <InfoDiv/>
       <MainMenu/>
