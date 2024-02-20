@@ -1,0 +1,17 @@
+.navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    opacity: .4;
+  }
+  
+  .navlink {
+    display: inline-block;
+    padding: 20px 20px;
+    opacity: 1;
+    text-decoration: none;
+    color: black;
+  }
+  

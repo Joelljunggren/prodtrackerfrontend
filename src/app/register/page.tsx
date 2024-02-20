@@ -1,5 +1,6 @@
 
 import React from "react";
+import Header from "../components/navbar";
 
 const YourComponent: React.FC = () => {
   const productivityRating = [1, 2, 3, 4, 5, 6, 7];
@@ -8,6 +9,7 @@ const YourComponent: React.FC = () => {
   return (
     <>
     {/* Måste göra om det här till komponenter */}
+    <Header/>
       <div className="formDiv">
         <div className="formGreeting">Redigstrera dina nuvarande nivåer</div>
         <form>
