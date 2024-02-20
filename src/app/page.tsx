@@ -1,10 +1,10 @@
 import Link from "next/link"
+import Navbar from "./components/navbar"
 
 export default function Home() {
   return <>
-  <header>
-  </header>
   <body>
+  <Navbar/>
     <section className="split">
     <div className="infoDiv">
       <h1>

@@ -13,15 +13,22 @@ body {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.background-container {
-  background-image: url('./images/mountains.jpg'); /* Update the path accordingly */
-  background-size: cover; /* Adjust the background size as needed */
-  background-position: center;
-  /* Additional styles for the container */
-  width: fit-content;
-  height: 100vh; /* Adjust the height as needed */
+/* .navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: whitesmoke;
+  opacity: .4;
 }
 
+.navlink {
+  display: inline-block;
+  padding: 20px 20px;
+  opacity: 1;
+  text-decoration: none;
+  color: black;
+} */
 
 .MainMenu {
   display: flex;
