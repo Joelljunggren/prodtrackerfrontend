@@ -1,0 +1,124 @@
+body {
+  background-image: url('./images/mountains.jpg'); /* Update the path accordingly */
+  background-size: cover; /* Adjust the background size as needed */
+  background-position: center;
+  background-color: rgb(48, 51, 54);
+  height: 90vh;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.background-container {
+  background-image: url('./images/mountains.jpg'); /* Update the path accordingly */
+  background-size: cover; /* Adjust the background size as needed */
+  background-position: center;
+  /* Additional styles for the container */
+  width: fit-content;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+
+.MainMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.MenuLink {
+  text-align: center;
+  display: inline-block;
+  padding: 20px 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  border: solid 1px black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.MenuLink:hover {
+  color: lightblue;
+}
+
+
+.infoDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 50%;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+
+}
+
+.infoDiv p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-shadow: inherit;
+}
+
+.infoDiv h1 {
+  padding-bottom: 0px;
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+.formDiv {
+  width: 50%;
+  background-color: whitesmoke;
+  opacity: 80%;
+  padding: 20px;
+  border: solid 2px black;
+}
+
+.textLabel {
+  padding-top: 10px;
+}
+
+.formGreeting{
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.inputField {
+  font-family: inherit;
+  height: auto;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.split {
+  display: flex;
+  max-width: 90%;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .split {
+    flex-direction: column; /* Stack the divs vertically */
+  }
+  .infoDiv {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+  body {
+    height: 98.2vh;
+  }
+}
