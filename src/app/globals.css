@@ -66,11 +66,59 @@ body {
 }
 
 .formDiv {
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
   background-color: whitesmoke;
   opacity: 80%;
-  padding: 20px;
-  border: solid 2px black;
+  padding: 10px;
+  color: black;
+  box-shadow: 0 0 15px black;
+}
+
+.formInside{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 400px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.formInside textarea {
+  padding: 10px;
+  height: 80%;
+  font-family: inherit;
+  resize: none;
+}
+
+.formInside label {
+  font-weight: bold;
+}
+
+.formButton {
+  padding-top: 10px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formButton button {
+}
+
+.btn {
+  width: 48%;
+  font-size: large;
+  font-weight: bold;
+  background-color: skyblue;
+}
+
+.radioButtons {
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 
 .textLabel {
