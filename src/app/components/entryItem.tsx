@@ -1,12 +1,11 @@
 // 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Entry } from "./Entry";
 import { LoadEntries } from './services/entryServices';
 import { EntryProps } from './services/entryItemProps';
 
 
-const EntryItem: React.FC<Entry> = () => {
+const EntryItem: React.FC = () => {
 
 
   const [entries, setEntries] = useState<EntryProps['entry'][]>([]);

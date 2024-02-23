@@ -4,7 +4,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-color: rgb(48, 51, 54);
-  min-height: 90vh; /* Set a minimum height to ensure content fits within the viewport */
+  /* min-height: 90vh; Set a minimum height to ensure content fits within the viewport */
   margin-left: 20%;
   margin-right: 20%;
   display: flex;

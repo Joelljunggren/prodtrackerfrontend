@@ -27,9 +27,7 @@ const Page: React.FC = () => {
     <section className='entrySection'>
         <h1>Tidigare inlägg</h1>
     <ul className='entryList'>
-        {entries.map(entry => (
-            <EntryItem key={entry.id} {...entry} />
-        ))}
+        <EntryItem/>
     </ul>
     </section>
     </>
