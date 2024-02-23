@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar"
 import InfoDiv from "./components/infodiv"
 import MainMenu from "./components/MainMenu"
 
