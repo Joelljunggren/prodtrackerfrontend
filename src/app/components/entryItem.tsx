@@ -1,7 +1,7 @@
 // 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { LoadEntries } from './services/entryServices';
+import { LoadEntries, DeleteEntry } from './services/entryServices';
 import { EntryProps } from './services/entryItemProps';
 
 
@@ -14,6 +14,7 @@ const EntryItem: React.FC = () => {
     const fetchData = async () => {
         try {
             const data = await LoadEntries();
+            console.log(data)
             setEntries(data);
         } catch (error) {
             console.error("Error loading entries:", error);
@@ -22,17 +23,28 @@ const EntryItem: React.FC = () => {
     fetchData();
 }, []);
 
+const entryDeleter = async (entryId: number) => {
+  try {
+    console.log('Entry ID:', entryId)
+    await DeleteEntry(entryId);
+    const updateData = await LoadEntries();
+    setEntries(updateData);
+  } catch (error) {
+    console.error("Error deleting entry", error);
+  }
+};
+
   return (
     <>
-      {entries.map((entry, id) => (
-        <li key={id} className='entryListItem'>
+      {entries.map((entry, index) => (
+        <li key={index} className='entryListItem'>
           <div className='entryContainer'>
             <div className='stresslevel'>Stressnivå: {entry.stressLevel}</div>
             <div className='productivityLevel'>Produktivitet: {entry.productivityLevel}</div>
             <p className='message'>{entry.message}</p>
-            <div className='entryDate'>Här ska det stå datum</div>
+            <div className='entryDate'>{entry.timeOfEntry}</div>
             <div className='removeEntryDiv'>
-              <button>Remove entry</button>
+              <button onClick={() => entryDeleter(entry.entryId)}>Remove entry</button>
             </div>
             {/* <div className='entryDate'>{entry.entryDate.toDateString()}</div> */}
           </div>

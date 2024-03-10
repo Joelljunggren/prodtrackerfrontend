@@ -1,7 +1,7 @@
 export interface Entry {
-    id: number,
+    entryId: number,
     stressLevel: number,
     productivityLevel: number,
     message: string,
-    entryDate: Date
+    timeOfEntry: Date
 }
