@@ -3,23 +3,27 @@ import axios from "axios";
 const baseURL = "https://localhost:7104/api/Entry";
 console.log("API URL:", baseURL);
 
-// export const LoadEntries = () => {
-//     return axios.get(baseURL)
-//     .then(response => response.data)
-// }
-
 export const LoadEntries = () => {
     return axios.get(baseURL)
-      .then(response => {
-        const data = response.data;
-        console.log('Data from LoadEntries:', data);
-        return data; // Return the data after logging
-      })
-      .catch(error => {
-        console.error('Error in LoadEntries:', error);
-        throw error; // Re-throw the error to propagate it to the next catch block
-      });
-  }
+    .then(response => response.data)
+}
+
+export const DeleteEntry = (entryId: number) => {
+    return axios.delete(`${baseURL}/${entryId}`)
+    .then(response => response.data)
+}
+
+// export const DeleteEntry = (entryId: number) => {
+//     const url = `${baseURL}/${entryId}`;
+//     console.log('Delete URL:', url);
+  
+//     return axios.delete(url)
+//       .then(response => response.data)
+//       .catch(error => {
+//         console.error('Error deleting entry:', error);
+//         throw error;
+//       });
+//   };
 
 
 // export const CreateEntry = (entry: { 
