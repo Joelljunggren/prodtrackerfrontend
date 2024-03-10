@@ -201,14 +201,11 @@ body {
 }
 
 .entryDate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
   text-align: center;
+  font-size: smaller;
   width: 100%;
   background-color: whitesmoke;
-  font-weight: bold;
 }
 
 .removeEntryDiv {

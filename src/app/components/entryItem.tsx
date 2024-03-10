@@ -4,6 +4,16 @@ import React, { useState, useEffect } from 'react';
 import { LoadEntries, DeleteEntry } from './services/entryServices';
 import { EntryProps } from './services/entryItemProps';
 
+const EntryTimeComponent: React.FC<EntryProps> = ({entry}) => {
+  let formatTime = entry.timeOfEntry.toString();
+
+  const fixedTime = formatTime.slice(0, -13)
+
+  return (
+    <p>Inlägg skapat: {fixedTime}</p>
+  )
+}
+
 
 const EntryItem: React.FC = () => {
 
@@ -22,6 +32,7 @@ const EntryItem: React.FC = () => {
     }
     fetchData();
 }, []);
+
 
 const entryDeleter = async (entryId: number) => {
   try {
@@ -42,7 +53,9 @@ const entryDeleter = async (entryId: number) => {
             <div className='stresslevel'>Stressnivå: {entry.stressLevel}</div>
             <div className='productivityLevel'>Produktivitet: {entry.productivityLevel}</div>
             <p className='message'>{entry.message}</p>
-            <div className='entryDate'>{entry.timeOfEntry}</div>
+            <div className='entryDate'>
+              <EntryTimeComponent entry={entry}/>
+            </div>
             <div className='removeEntryDiv'>
               <button onClick={() => entryDeleter(entry.entryId)}>Remove entry</button>
             </div>
