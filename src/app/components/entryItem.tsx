@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { LoadEntries, DeleteEntry, CalculateAverageProductivity, CalculateAverageStress } from './services/entryServices';
 import { EntryProps } from './services/entryItemProps';
+import Averages from './averages';
 
 const EntryTimeComponent: React.FC<EntryProps> = ({entry}) => {
   let formatTime = entry.timeOfEntry.toString();
@@ -56,12 +57,7 @@ const entryDeleter = async (entryId: number) => {
 
   return (
     <>
-      {averageProductivity !== null && (
-        <p>Average Productivity: {averageProductivity}</p>
-      )}
-      {averageStress !== null && (
-        <p>Average Stress: {averageStress}</p>
-      )}
+    <Averages/>
       {entries.map((entry, index) => (
         <li key={index} className='entryListItem'>
           <div className='entryContainer'>

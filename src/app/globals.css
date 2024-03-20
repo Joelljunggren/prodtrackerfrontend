@@ -224,6 +224,17 @@ body {
   font-size: 14px;
 }
 
+.averages {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.stressandproductivity {
+  text-align: center;
+  font-weight: bolder;
+}
+
 @media (max-width: 1200px) {
   .split {
     flex-direction: column; /* Stack the divs vertically */
