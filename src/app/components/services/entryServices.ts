@@ -13,6 +13,16 @@ export const DeleteEntry = (entryId: number) => {
     .then(response => response.data)
 }
 
+export const CalculateAverageProductivity = async () => {
+    const response = await axios.get<number>(`${baseURL}/Average Productivity`);
+    return response.data;
+}
+
+export const CalculateAverageStress = async () => {
+    const response = await axios.get<number>(`${baseURL}/Average Stress`);
+    return response.data;
+}
+
 // export const DeleteEntry = (entryId: number) => {
 //     const url = `${baseURL}/${entryId}`;
 //     console.log('Delete URL:', url);
