@@ -1,7 +1,7 @@
 // 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { LoadEntries, DeleteEntry } from './services/entryServices';
+import { LoadEntries, DeleteEntry, CalculateAverageProductivity, CalculateAverageStress } from './services/entryServices';
 import { EntryProps } from './services/entryItemProps';
 
 const EntryTimeComponent: React.FC<EntryProps> = ({entry}) => {
@@ -19,6 +19,8 @@ const EntryItem: React.FC = () => {
 
 
   const [entries, setEntries] = useState<EntryProps['entry'][]>([]);
+  const [averageProductivity, setaverageProductivity] = useState<number | null>(null);
+  const [averageStress, setAverageStress] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,13 +28,20 @@ const EntryItem: React.FC = () => {
             const data = await LoadEntries();
             console.log(data)
             setEntries(data);
+
+            const productivity = await CalculateAverageProductivity();
+            console.log(productivity)
+            setaverageProductivity(productivity);
+
+            const stress = await CalculateAverageStress();
+            console.log(stress)
+            setAverageStress(stress);
         } catch (error) {
             console.error("Error loading entries:", error);
         }
     }
     fetchData();
 }, []);
-
 
 const entryDeleter = async (entryId: number) => {
   try {
@@ -47,6 +56,12 @@ const entryDeleter = async (entryId: number) => {
 
   return (
     <>
+      {averageProductivity !== null && (
+        <p>Average Productivity: {averageProductivity}</p>
+      )}
+      {averageStress !== null && (
+        <p>Average Stress: {averageStress}</p>
+      )}
       {entries.map((entry, index) => (
         <li key={index} className='entryListItem'>
           <div className='entryContainer'>
