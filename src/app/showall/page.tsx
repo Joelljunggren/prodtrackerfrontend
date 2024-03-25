@@ -24,12 +24,12 @@ const Page: React.FC = () => {
     return (
     <>
     <Navbar/>
-    <section className='entrySection'>
+    <div className='entrySection'>
         <h1>Tidigare inlägg</h1>
     <ul className='entryList'>
         <EntryItem/>
     </ul>
-    </section>
+    </div>
     </>
     );
 }
