@@ -25,7 +25,6 @@ const Page: React.FC = () => {
     <>
     <Navbar/>
     <div className='entrySection'>
-        <h1>Tidigare inlägg</h1>
     <ul className='entryList'>
         <EntryItem/>
     </ul>

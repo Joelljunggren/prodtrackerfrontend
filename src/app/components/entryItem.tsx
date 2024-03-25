@@ -57,7 +57,7 @@ const entryDeleter = async (entryId: number) => {
 
   return (
     <>
-    <Averages/>
+    <h1>Tidigare inlägg</h1>
       {entries.map((entry, index) => (
         <li key={index} className='entryListItem'>
           <div className='entryContainer'>
@@ -74,6 +74,7 @@ const entryDeleter = async (entryId: number) => {
           </div>
         </li>
       ))}
+          <Averages/>
     </>
   );
 }

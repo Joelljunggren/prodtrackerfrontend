@@ -32,16 +32,16 @@ const Averages: React.FC = () => {
 
     return (
         <>
-        <h2>Current averages</h2>
         <div className="averages">
+        <h2>Genomsnitt av tidigare entries</h2>
             <div className="stressandproductivity">
                 {averageProductivity !== null && (
-                    <p>Average Productivity: {averageProductivity}</p>
+                    <p>Produktivitet: {averageProductivity}</p>
                 )}
             </div>
             <div className="stressandproductivity">
                 {averageStress !== null && (
-                    <p>Average Stress: {averageStress}</p>
+                    <p>Stress: {averageStress}</p>
                 )}
             </div>
         </div>
