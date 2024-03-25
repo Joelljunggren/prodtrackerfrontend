@@ -3,9 +3,9 @@ import MainMenu from "./components/MainMenu"
 
 export default function Home() {
   return <>
-    <section className="split">
-      <InfoDiv/>
+  <main>
+    <InfoDiv/>
       <MainMenu/>
-    </section>
+  </main>
   </>
 }
