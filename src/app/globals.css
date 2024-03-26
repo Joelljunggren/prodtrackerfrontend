@@ -65,48 +65,87 @@ body {
   font-size: 2.1rem;
 }
 
-.formDiv {
+.formOuter {
+  margin-top: 100px;
+  padding: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 90%;
-  background-color: whitesmoke;
-  opacity: 80%;
-  padding: 10px;
-  color: black;
-  box-shadow: 0 0 15px black;
+  justify-content: center;
 }
 
-.formInside{
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-  height: 400px;
-  margin-bottom: 10px;
-  padding: 15px;
-}
-
-.formInside textarea {
-  padding: 10px;
-  height: 80%;
-  font-family: inherit;
-  resize: none;
-}
-
-.formInside label {
-  font-weight: bold;
-}
-
-.formButton {
-  padding-top: 10px;
-  height: 40px;
+.container {
+  max-width: 700px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  padding: 25px 30px 40px;
+  color: black;
+  background: white;
+  border-radius: 5px;
+  
 }
 
-.btn {
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* .inputvalue {
+  font-weight: 500;
+  margin-left: 50px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: lightblue;
+  border: solid 2px black;
+} */
+
+.container form .form-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.inputbox input:out-of-range {
+  color: #FF2400;
+}
+
+form .form-details .inputbox {
+  width: calc(100% / 2 - 20px);
+}
+
+.form-details .inputbox input {
+  height: 45px;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+form .form-details .messageInput {
+  margin-top: 20px;
+  width: calc(100% - 20px);
+}
+
+.form-details .messageInput input {
+  min-height: 45px;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.formBtn {
+  margin-top: 20px;
+  height: 45px;
+  width: calc(100% / 2 - 20px);
+  background-color: lightblue;
+  font-size: large;
+}
+
+.btbDiv {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* .btn {
   width: 48%;
   font-size: large;
   font-weight: bold;
@@ -137,7 +176,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
-}
+} */
 
 .split {
   display: flex;
@@ -257,5 +296,21 @@ body {
 @media (max-width:900px) {
   .MenuLink {
     width: 80%;
+  }
+}
+
+@media (max-width:600px) {
+  .container form .form-details{
+    flex-direction: column;
+  }
+  .container form .inputbox {
+    width: calc(100%);
+  }
+  .container form .messageInput{
+    width: calc(100%);
+  }
+  .inputbox input {
+    margin-bottom: 10px;
+    width: 100%;
   }
 }
