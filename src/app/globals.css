@@ -313,4 +313,15 @@ form .form-details .messageInput {
     margin-bottom: 10px;
     width: 100%;
   }
+  .infoDiv {
+    max-width: calc(100%);
+    padding: 20px;
+  }
+}
+
+@media (max-width:500px) {
+  .stresslevel, .productivityLevel {
+    flex: 100%;
+    height: 20px;
+  }
 }
