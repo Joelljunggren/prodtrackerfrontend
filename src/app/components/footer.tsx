@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="footer-div">
             <div className="footer-split">
                 <span>Generic Trademark</span>
-                <span>Med stort tack till kaffe.</span>
+                <span>Stort tack till kaffe.</span>
             </div>
             <div className="footer-split">
                 <span>Min LinkedIn</span>
