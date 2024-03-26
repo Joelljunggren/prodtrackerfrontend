@@ -21,7 +21,7 @@ export default function Registerform () {
         <input type="textarea" placeholder="Fyll i meddelande" required></input>
       </div>
       <div className="btbDiv">
-      <button className="formBtn">Submit</button>
+      <button type="submit" className="formBtn">Submit</button>
       <button className="formBtn">Cancel</button> 
       </div>
         </div>
