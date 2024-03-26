@@ -5,6 +5,37 @@ body {
   background-attachment: fixed;
   background-color: rgb(48, 51, 54);
   color: whitesmoke;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-div {
+  display: flex;
+  height: 100px;
+  margin-top: auto;
+  background-color: whitesmoke;
+  /* opacity: .6; */
+  height: 80px;
+  justify-content: space-between;
+  color: black;
+  font-size: small;
+}
+
+.footer-div .footer-split {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+  width: 50%;
+}
+
+.footer-div .footer-split span {
+  padding: 5px;
+  display: block;
 }
 
 .MainMenu {
@@ -45,6 +76,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 80px;
+  padding-top: 30px;
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
