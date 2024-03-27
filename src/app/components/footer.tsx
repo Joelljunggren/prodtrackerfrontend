@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Footer() {
@@ -8,9 +9,13 @@ export default function Footer() {
                 <span>Generic Trademark</span>
                 <span>Stort tack till kaffe.</span>
             </div>
-            <div className="footer-split">
-                <span>Min LinkedIn</span>
-                <span>Länk till TUC</span>
+            <div className="footer-right">
+                <span>
+                    <Link className="foot-link" href="https://github.com/Joelljunggren" target="_blank">Github</Link>
+                </span>
+                <span>
+                    <Link className="foot-link" href="https://www.linkedin.com/in/joel-ljunggren-456368250/" target="_blank">Linkedin</Link>
+                </span>
             </div>
         </div>
         </>
