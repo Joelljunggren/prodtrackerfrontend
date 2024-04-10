@@ -24,41 +24,7 @@ export const CalculateAverageStress = async () => {
     return response.data;
 }
 
-// export const CreateEntry = (entry: {stress: number; productivity: number; message: string}) => {
-//     return axios.post(baseURL, {
-//         stress: entry.stress,
-//         productivity: entry.productivity,
-//         message: entry.message
-//     }).then(response => response.data);
-// }
-
 export const CreateEntry = (entry: Entry) => {
     return axios.post(baseURL, entry)
     .then(response => response.data)
 }
-
-// export const DeleteEntry = (entryId: number) => {
-//     const url = `${baseURL}/${entryId}`;
-//     console.log('Delete URL:', url);
-  
-//     return axios.delete(url)
-//       .then(response => response.data)
-//       .catch(error => {
-//         console.error('Error deleting entry:', error);
-//         throw error;
-//       });
-//   };
-
-
-// export const CreateEntry = (entry: { 
-//     productivityLevel: number, 
-//     stressLevel: number,
-//     message: string,
-//     entryDate: Date} ) => {
-//     return axios.post(baseURL, {
-//         productivityLevel: entry.productivityLevel,
-//         stressLevel: entry.stressLevel,
-//         message: entry.message,
-//         entryDate: entry.entryDate
-//     }).then(response => response.data)
-// }

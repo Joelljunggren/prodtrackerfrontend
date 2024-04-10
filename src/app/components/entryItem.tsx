@@ -70,7 +70,6 @@ const entryDeleter = async (entryId: number) => {
             <div className='removeEntryDiv'>
               <button onClick={() => entryDeleter(entry.entryId)}>Remove entry</button>
             </div>
-            {/* <div className='entryDate'>{entry.entryDate.toDateString()}</div> */}
           </div>
         </li>
       ))}
