@@ -18,7 +18,6 @@ body {
   height: 100px;
   margin-top: auto;
   background-color: whitesmoke;
-  /* opacity: .6; */
   height: 80px;
   justify-content: space-between;
   color: black;
@@ -200,38 +199,6 @@ form .form-details .messageInput {
   width: 100%;
 }
 
-/* .btn {
-  width: 48%;
-  font-size: large;
-  font-weight: bold;
-  background-color: skyblue;
-}
-
-.radioButtons {
-  padding-top: 5px;
-  padding-bottom: 20px;
-}
-
-.textLabel {
-  padding-top: 10px;
-}
-
-.formGreeting{
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-.inputField {
-  font-family: inherit;
-  height: auto;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: none;
-} */
 
 .split {
   display: flex;
@@ -326,7 +293,6 @@ form .form-details .messageInput {
   text-align: center;
   font-weight: bold;
   font-size: 1.4rem;
-  /* outline: solid 1px black; */
   margin-bottom: 5px;
 }
 
@@ -334,10 +300,12 @@ form .form-details .messageInput {
   text-align: center;
 }
 
-/* .averagesDiv {
-  text-align: center;
-  font-weight: bolder;
-} */
+.monthlyDiv {
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 1200px) {
   .split {

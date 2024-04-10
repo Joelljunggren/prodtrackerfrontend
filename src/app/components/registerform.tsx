@@ -24,6 +24,7 @@ export default function Registerform () {
     setProductivityLevel("");
     setMessage("");
     //Här behöver jag fixa så att jag visar någonting om att min entry sparats.
+    alert("Inlägg skapat.")
   }
 
   return (
