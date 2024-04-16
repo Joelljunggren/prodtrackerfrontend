@@ -1,8 +1,6 @@
 'use client'
 import React, { useState } from "react"
 import { CreateEntry } from "./services/entryServices"
-// import { EntryFormProps } from "./EntryFormProps"
-// import { Entry } from "./Entry"
 
 export default function Registerform () {
   const [stressLevel, setStressLevel] = useState("");
@@ -23,7 +21,6 @@ export default function Registerform () {
     setStressLevel("");
     setProductivityLevel("");
     setMessage("");
-    //Här behöver jag fixa så att jag visar någonting om att min entry sparats.
     alert("Inlägg skapat.")
   }
 

@@ -207,7 +207,7 @@ form .form-details .messageInput {
 
 .entrySection {
   align-items: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -285,19 +285,17 @@ form .form-details .messageInput {
 }
 
 .averages {
-  margin-top: 20px;
   display: grid;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 
 .stressandproductivity {
-  text-align: center;
+  /* width: 500px; */
+  /* outline: solid 1px black; */
   font-weight: bold;
-  font-size: 1.4rem;
-  margin-bottom: 5px;
-}
-
-.averages h2 {
-  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 10px;
 }
 
 .monthlyDiv {

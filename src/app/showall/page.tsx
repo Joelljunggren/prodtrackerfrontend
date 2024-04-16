@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import EntryItem from "../components/entryItem";
 import { LoadEntries } from "../components/services/entryServices";
 import { Entry } from '../components/Entry';
+import Averages from '../components/averages';
 import Footer from '../components/footer';
 
 const Page: React.FC = () => {
@@ -26,6 +27,7 @@ const Page: React.FC = () => {
     <>
     <Navbar/>
     <div className='entrySection'>
+    <Averages/>
     <ul className='entryList'>
         <EntryItem/>
     </ul>
