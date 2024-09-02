@@ -33,19 +33,23 @@ const Averages: React.FC = () => {
     return (
         <>
         <div className="averages">
-            <div className="stressandproductivity">
-            <h2>Medelvärden:</h2>
-                <div>
-                {averageProductivity !== null && (
-                    <p>Produktivitet: {averageProductivity}</p>
-                )}
+                {averageProductivity !== null && averageStress !== null ? (
+                <>
+                        <div className="averagesHeader">
+                    <h2>Registrerade medelvärden</h2>
                 </div>
-            </div>
-            <div className="stressandproductivity">
-                {averageStress !== null && (
-                    <p>Stress: {averageStress}</p>
-                )}
-            </div>
+                    <div className="averageProductivity">
+                        <p>Produktivitet: {averageProductivity}</p>
+                    </div>
+                    <div className="averageStress">
+                        <p>Stress: {averageStress}</p>
+                    </div>
+                </>
+            ) : (
+                <div className="connectionError">
+                    <p>Problem med att hämta data, se över om API'n är igång.</p>
+                </div>
+            )}
         </div>
         </>
     )
